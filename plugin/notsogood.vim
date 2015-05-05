@@ -64,6 +64,3 @@ function! EmailSnippetTempFile ()
     return tempdir."/snippet_".tempfile."_".filename.extension
 endfunction
 
-nnoremap <Leader>E :call EmailPeople()<CR>
-vnoremap <expr> <Leader>E "y:new ".EmailSnippetTempFile()."<CR>:let b:mailtemp=1<CR>VGP:w<CR>:call EmailPeople()<CR>"
-
