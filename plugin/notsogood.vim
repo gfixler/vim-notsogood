@@ -6,7 +6,7 @@ function! WinCallEncode (str)
     return b
 endfunction
 
-let g:outlook_path="C:/Progra~2/Micros~2/Office12/Outlook.exe"
+let g:notsogood_outlook_path="C:/Program\ Files/Microsoft\ Office/root/Office16/OUTLOOK.EXE"
 
 function! OutlookMail (addresses, subject, body, attachment)
     if ! exists("g:notsogood_outlook_path")
