@@ -6,8 +6,6 @@ function! WinCallEncode (str)
     return b
 endfunction
 
-let g:notsogood_outlook_path="C:/Program\ Files/Microsoft\ Office/root/Office16/OUTLOOK.EXE"
-
 function! OutlookMail (addresses, subject, body, attachment)
     if ! exists("g:notsogood_outlook_path")
         echoerr "g:notsogood_outlook_path not set!"
