@@ -47,7 +47,9 @@ function! OutlookMail (addresses, subject, body, attachment)
         let cmd = cmd.' //a "'.a:attachment.'"'
     endif
 
-    "echo cmd
+    echom "NotSoGood plugin executing the following command:"
+    echom cmd
+
     exe "silent !".cmd
 endfunction
 
