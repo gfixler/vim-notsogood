@@ -1,4 +1,11 @@
 " Send mail through Outlook
+
+function! WinCallEncode (str)
+    let a = substitute(a:str, " ", "\\\\%20", "g")
+    let b = substitute(a, ",", "\\\\%2C", "g")
+    return b
+endfunction
+
 let g:outlook_path="C:/Progra~2/Micros~2/Office12/Outlook.exe"
 
 function! OutlookMail (addresses, subject, body, attachment)
