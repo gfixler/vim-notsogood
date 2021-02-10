@@ -9,6 +9,14 @@ endfunction
 let g:outlook_path="C:/Progra~2/Micros~2/Office12/Outlook.exe"
 
 function! OutlookMail (addresses, subject, body, attachment)
+    if ! exists("g:notsogood_outlook_path")
+        echoerr "g:notsogood_outlook_path not set!"
+        return
+    endif
+    if ! file_readable(g:notsogood_outlook_path)
+        echoerr "g:notsogood_outlook_path not a readable file!"
+        return
+    endif
     let cmd=g:outlook_path.' /c ipm.note'
 
     " refine the field data
